@@ -1,0 +1,30 @@
+<% if @team.errors.present? %>
+
+<ul>
+	<% @team.errors.full_messages.each do |message| %>
+	<li><%= message %></li>
+	<%end%>
+
+<% end %>
+
+
+
+<%= form_for @team do |f| %>
+<table>
+	<tr>
+		<td>Name</td>
+		<td>:</td>
+		<td><%= f.text_field :name%></td>
+	</tr>
+
+	<tr>
+		<td>Name_kode</td>
+		<td>:</td>
+		<td><%= f.text_field :name_kode %></td>
+	</tr>
+
+	<tr>
+<td colspan = '3'><%= f.submit %>
+	</tr>
+</table>
+<% end %>

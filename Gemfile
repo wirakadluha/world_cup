@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'friendly_id'
+gem 'acts-as-taggable-on'
 
 
 

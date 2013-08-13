@@ -1,0 +1,36 @@
+<% if @coach.errors.present? %>
+
+<ul>
+	<% @coach.errors.full_messages.each do |message| %>
+	<li><%= message %></li>
+	<%end%>
+
+<% end %>
+
+
+
+<%= form_for @coach do |f| %>
+<table>
+	<tr>
+		<td>Name</td>
+		<td>:</td>
+		<td><%= f.text_field :name%></td>
+	</tr>
+
+	<tr>
+		<td>age</td>
+		<td>:</td>
+		<td><%= f.text_field :age%></td>
+	</tr>
+
+	<tr>
+		<td>national</td>
+		<td>:</td>
+		<td><%= f.text_field :national%></td>
+	</tr>
+
+	<tr>
+<td colspan = '3'><%= f.submit %>
+	</tr>
+</table>
+<% end %>

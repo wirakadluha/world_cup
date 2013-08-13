@@ -1,0 +1,13 @@
+<h1> List All PLayer </h1>
+<ul>
+	<%@players.each do |player| %>
+	<li><%= link_to player.name, player_path(player) %> | 
+		<%= link_to player.number_player, player_path(player)  %> | 
+		<%= link_to player.position, player_path(player) %>  
+		<%= link_to 'Edit', edit_player_path(player)%> |
+	    <%= link_to 'Delete', player_path(player), method: :delete%>
+	</li>
+	<%end%>
+</ul>
+
+<%= link_to 'New_player', new_player_path %>
