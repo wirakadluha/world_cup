@@ -24,6 +24,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'friendly_id'
 gem 'acts-as-taggable-on'
+gem 'bootstrap-sass', '~> 2.3.2.0'
 
 
 
