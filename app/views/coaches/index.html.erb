@@ -1,13 +1,16 @@
-<h1> List All Coach </h1>
-<ul>
-	<%@coaches.each do |coach| %>
-	<li><%= link_to coach.name, coach_path(coach) %> | 
-		<%= link_to coach.age, coach_path(coach)  %> | 
-		<%= link_to coach.national, coach_path(coach) %>  
-		<%= link_to 'Edit', edit_coach_path(coach)%> |
-	    <%= link_to 'Delete', coach_path(coach), method: :delete%>
-	</li>
-	<%end%>
-</ul>
-
-<%= link_to 'New_coach', new_coach_path %>
+<div class='row-fluid'>
+	<div class='span-8'>
+		<h1> List All Coach </h1>
+		<ul>
+			<%@coaches.each do |coach| %>
+			<li><%= link_to coach.name, coach_path(coach) %> | 
+				<%= link_to coach.age, coach_path(coach)  %> | 
+				<%= link_to coach.national, coach_path(coach) %>  
+				<%= link_to 'Edit', edit_coach_path(coach)%> |
+			    <%= link_to 'Delete', coach_path(coach), method: :delete%>
+			</li>
+			<%end%>
+		</ul>
+		<%= link_to 'New_coach', new_coach_path %>
+	</div>
+</div> 

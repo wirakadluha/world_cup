@@ -1,4 +1,9 @@
-<h1>Editing <%= @coach.name %> <%= @coach.age %><%= @coach.national %> </h1>
+<div class='row-fluid'>
+	<div class='span-8'>
 
-<%= render 'form' %>
-<%= link_to 'cancel', coaches_path %>
+		<h1>Editing <%= @coach.name %> <%= @coach.age %><%= @coach.national %> </h1>
+			<%= render 'form' %>
+			<%= link_to 'cancel', coaches_path %>
+
+	</div>
+</div>

@@ -1,19 +1,11 @@
-<h1> List All User </h1>
-<ul>
-	<%@users.each do |user| %>
-	<li><%= user.name %>   |   <%=user.email %></li>
-	<%end%>
-</ul>
-</table>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<address>
-  <strong>An_Raka, Inc.</strong><br>
-  795 Folsom Ave, Suite 600<br>
-  San Francisco, CA 94107<br>
-  <abbr title="Phone">Phone:</abbr> (+628) 896-8822
-</address>
-
-<address>
-  <strong>Full Name</strong><br>
-  <a href="mailto:#">wiraka.networkindonesia@gmail.com</a>
-</address>
+<div class='row-fluid'>
+	<div class='span-8'>
+		<h1> List All User </h1>
+		<ul>
+			<%@users.each do |user| %>
+			<li><%= user.name %>   |   <%=user.email %>
+			</li>
+			<%end%>
+		</ul>
+	</div>
+</div>

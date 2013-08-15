@@ -1,34 +1,38 @@
 <div class='row-fluid'>
 	<div class='span-8'>
+		<p class="lead">
+		<h1> List All PLayer </h6>
+			<ul>
+				<%@players.each do |player| %>
+				<li><%= link_to player.name, player_path(player) %> |
+					<%= link_to player.number_player, player_path(player)  %> | 
+					<%= link_to player.position, player_path(player) %> <br/> 
+					<%= link_to 'Edit', edit_player_path(player), class:'btn btn-primary'%> 
+				    <%= link_to 'Delete', player_path(player), method: :delete, class:'btn btn-danger'%>
+				</li>
+				<%end%>
+			</ul>
+			<%= link_to 'New_player', new_player_path, class: 'btn btn-success' %>
 
-<p class="lead">
-<h1> List All PLayer </h6>
-<ul>
-	<%@players.each do |player| %>
-	<li><%= link_to player.name, player_path(player) %> |
-		<%= link_to player.number_player, player_path(player)  %> | 
-		<%= link_to player.position, player_path(player) %> <br/> 
-		<%= link_to 'Edit', edit_player_path(player), class:'btn btn-primary'%> 
-	    <%= link_to 'Delete', player_path(player), method: :delete, class:'btn btn-danger'%>
-	</li>
-	<%end%>
-</ul>
 
-<%= link_to 'New_player', new_player_path, class: 'btn btn-success' %>
+			<div class='clearer '></div>
+			  <footer class='footer white'>
+            	<div class='container'>
+				  <address>
+				 	 <strong>An_Raka, Inc.</strong><br>
+					         795 Folsom Ave, Suite 600<br>
+			    	         San Francisco, CA 94107<br>
+			       	  <abbr title="Phone">Phone:
+			       	  </abbr> (+628) 896-8822
+			      </address>
+			   	  <address>
+			  		  <strong>Full Name</strong><br>
+			   		  <a href="mailto:#">wiraka.wiraka@gmail.com
+			  		  </a>
+				  </address>
+			  </footer>
+		    </div>
+			
 
+	</div>
 </div>
-</div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<address>
-  <strong>An_Raka, Inc.</strong><br>
-  795 Folsom Ave, Suite 600<br>
-  San Francisco, CA 94107<br>
-  <abbr title="Phone">Phone:</abbr> (+628) 896-8822
-</address>
-
-<address>
-  <strong>Full Name</strong><br>
-  <a href="mailto:#">wiraka.networkindonesia@gmail.com</a>
-</address>
-

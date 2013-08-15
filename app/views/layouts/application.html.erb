@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>WorldCup</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div class='container'>
-		<%= yield %>
-	</div>
-</body>
+	<head>
+	  <title>WorldCup</title>
+		  <%= stylesheet_link_tag    "application", :media => "all" %>
+		  <%= javascript_include_tag "application" %>
+		  <%= csrf_meta_tags %>
+	</head>
+	<body>
+	      <%= render 'layouts/menu'%>
+		<div style='margin-top:100px;'></div>
+		<div class='container' style='border:3px solid White; 
+			border-top:0px; border-left:0px; border-right:0px;
+			padding: 10px 5px 10px 5px; margin-top:20px; margin-bottom:20px;'>
+		  <%= yield %>
+	</body>
 </html>
