@@ -1,18 +1,110 @@
 <div class='row-fluid'>
 	<div class='span-8'>
 	    <h1>
-			<%= @player.name %>
 		</h1>
+		<div class="element">
+			<table class="tabelle_spieler" cellpadding="0" cellspacing="1">
+				<tbody>
+					<tr>
+						<td rowspan="3" class="" style="width:58px;background-color:#fff;margin:0px;padding:0 3px;border:1px solid #bbb;">
+							<img src="/assets/psg.jpg" alt="Paris Saint-Germain" title="Paris Saint-Germain">
+						</td>			
+						<td class="" style="background-image: url(http://www.transfermarkt.de/img/bg_table_th_gross.jpg);">
+							<h1 class="font" style="color:#fff;"><%=@player.number_player%> <%=@player.name%>
+							</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a title="Paris Saint-Germain">Paris Saint-Germain
+							</a> 
+							<a title="Paris Saint-Germain">Ligue 1
+							</a> (France)
+						</td>
+					</tr>
+					<tr>
+						<td>Current national player:
+							<a>Sweden
+							</a>
+							<a></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<p class="hl_startseite mt10 pp p">The profile for <%=@player.name%></p>
 		<p></p>
 	    <ul class="thumbnails">
 	       <li class="span4">
 			  <div class="thumbnail">
-			     <img src="/assets/bola1.jpg" alt="300x200" style="width; 300px; hight:200px;">
+				<img src="/assets/ZlatanIbrahimovic.jpg" alt="300x200" style="width; 300px; hight:200px;">
 			   	 <div class="caption">
-			      	<h3><%=@player.name%></h3>
+			      	<h3>
+			      		<div class="white"><%=@player.name%></div>
+			      	</h3>
 			      		<p>
-			      			informasi
-			      		</p>
+			      			<div class="white">
+			      			<table class="tabelle_spieler s10" cellpadding="0" cellspacing="1">
+								<tbody>
+									<tr>
+									    <td style="width:130px;">Name in native country:</td>
+									    <td class="fn n">
+									    	<span class="given-name s10"><%=@player.name%></span>
+									    </td>
+								    </tr>
+									<tr>
+										<td>Date of birth:</td>
+										<td><a href="" class="s10" title="03.10.1981"><%=@player.birth_date%></a></td>
+									</tr>
+									<tr>
+										<td>Place of birth:</td>
+										<td><%=@player.birth_place%>&nbsp;<span class="" title="sweden: rosengard">&nbsp;</span></td>
+									</tr>
+									<tr>
+										<td>Age:</td>
+										<td><%=@player.age%></td>
+									</tr>
+									<tr>
+										<td>Height:</td>
+										<td><%=@player.height%></td>
+									</tr>
+									<tr>
+										<td>Nationality:</td>
+										<td class="adr">
+											<span class="flaggen_sprite sprite_land_147 vt mt4" title="Sweden"></span>
+											<span class="country-name s10">sweden</span>
+											<br>
+										</td>
+									</tr>
+									<tr>
+										<td>Position:</td>
+										<td><%=@player.position%></td>
+									</tr>
+									<tr>
+										<td>Foot:</td>
+										<td><%=@player.foot%></td>
+									</tr>
+									<tr>
+										<td>Market value:</td>
+										<td><%=@player.market_value%><br><span style="color:#777;padding:0;">30.000.000 €</span>
+										&nbsp;
+											<a href="https://www.facebook.com/Achilles.Raka" title="Market value - development: Zlatan Ibrahimovic">
+												<img src="/assets/market_value2.jpg" alt="Market value - development: Zlatan Ibrahimovic" title="Market value - development: Zlatan Ibrahimovic" width="10" height="10">
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>Player's agent:</td>
+										<td>
+											<a href="https://www.facebook.com/Achilles.Raka" class="s10"><%=@player.player_agent%> 
+											</a>
+										</td>
+									</tr>
+										</tbody>
+								</table>
+						</div>
+			      	    </p>
 				      	<p>
 				      		<a href="" class="btn btn-primary"> informasi
 				      		</a>
@@ -22,7 +114,6 @@
 			      </div>
 			   </div>
 			</li>
-		</ul>
-		
+		</ul>		
 	</div>
 </div>

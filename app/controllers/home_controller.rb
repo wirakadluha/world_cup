@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 		@coaches = Coach.all
 		@players = Player.all
 		@scores = Score.all
-		@match_schedules = MatchSchedules.all
+		# @match_schedules = MatchSchedules.all
 	end
 
 

@@ -1,8 +1,10 @@
 <div class='row-fluid'>
-	<div class='span-8'>
-		<h1>Editing <%= @player.name %> | <%= @player.number_player %> | <%= @player.position %>
-		</h1>
-		<%= render 'form' %>
-		<%= link_to 'cancel', players_path, class: 'btn btn-warning btn-lg' %>
+	<div class='span-8 '>
+		<div class="white">	
+			<h1>Editing <%= @player.name %> | <%= @player.number_player %> | <%= @player.position %>
+			</h1>
+			<%= render 'form' %>
+			<%= link_to 'cancel', players_path, class: 'btn btn-warning btn-lg' %>
+		</div>
 	</div>
 </div>

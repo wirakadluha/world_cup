@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806172004) do
+ActiveRecord::Schema.define(:version => 20130816002315) do
 
   create_table "coaches", :force => true do |t|
     t.string   "name"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(:version => 20130806172004) do
     t.datetime "updated_at",    :null => false
     t.integer  "team_id"
     t.string   "position"
+    t.integer  "age"
+    t.string   "birth_date"
+    t.string   "birth_place"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "foot"
+    t.string   "market_value"
+    t.string   "player_agent"
   end
 
   add_index "players", ["slug"], :name => "index_players_on_slug", :unique => true
