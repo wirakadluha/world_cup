@@ -9,8 +9,8 @@
 						<td rowspan="3" class="" style="width:58px;background-color:#fff;margin:0px;padding:0 3px;border:1px solid #bbb;">
 							<img src="/assets/psg.jpg" alt="Paris Saint-Germain" title="Paris Saint-Germain">
 						</td>			
-						<td class="" style="background-image: url(http://www.transfermarkt.de/img/bg_table_th_gross.jpg);">
-							<h1 class="font" style="color:#fff;"><%=@player.number_player%> <%=@player.name%>
+						<td class="" style="">
+							<h1 class="font" style="color:blue;"><%=@player.number_player%> <%=@player.name%>
 							</h1>
 						</td>
 					</tr>
@@ -32,13 +32,14 @@
 				</tbody>
 			</table>
 		</div>
-		
+	
+
 		<p class="hl_startseite mt10 pp p">The profile for <%=@player.name%></p>
 		<p></p>
 	    <ul class="thumbnails">
 	       <li class="span4">
 			  <div class="thumbnail">
-				<img src="/assets/ZlatanIbrahimovic.jpg" alt="300x200" style="width; 300px; hight:200px;">
+			  	<%= image_tag @player.image_url, style:'width; 300px; hight:200px;' %>
 			   	 <div class="caption">
 			      	<h3>
 			      		<div class="white"><%=@player.name%></div>
@@ -109,11 +110,15 @@
 				      		<a href="" class="btn btn-primary"> informasi
 				      		</a>
 				      		<a href="" class="btn btn-primary"> informasi2
+
 				      		</a>
 				      	</p>
 			      </div>
 			   </div>
 			</li>
 		</ul>		
+      
 	</div>
 </div>
+
+

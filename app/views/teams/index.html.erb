@@ -7,7 +7,7 @@
 				</p>
 			<ul>
 				<%@teams.each do |team| %>
-				<li><%= link_to team.name, team_path(team) %> | <%=team.name_kode %>
+				<li><%= link_to team.name, team_path(team) %> | 
 					<br>
 						<%= link_to 'Edit', edit_team_path(team), class:'btn btn-primary'%>
 				   	    <%= link_to 'Destroy', team_path(team), method: :delete, class: 'btn btn-danger'%>
@@ -34,3 +34,5 @@
 			</footer> 
 	</div>
 </div>
+
+

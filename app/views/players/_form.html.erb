@@ -8,7 +8,7 @@
 				<%end%>
 			</ul>
 			<% end %>
-			<%= form_for @player do |f| %>
+			<%= form_for @player, html: {multipart: true} do |f| %>
 				<table>
 					<tr>
 						<td>Name</td>
@@ -24,6 +24,11 @@
 						<td>position</td>
 						<td>:</td>
 						<td><%= f.text_field :position%></td>
+					</tr>
+					<tr>
+						<td>image</td>
+						<td>:</td>
+						<td><%= f.file_field :image %></td>
 					</tr>
 					<tr>
 						<td colspan = '3'><%= f.submit %>
