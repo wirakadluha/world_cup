@@ -1,0 +1,20 @@
+<%= form_for(@match_schedule) do |f| %>
+	<div>
+		<%= f.label :home_team %>
+		<%= f.collection_select :home_team, Team.all, :id, :name %>
+	</div>
+
+	<div>
+		<%= f.label :away_team %>
+		<%= f.collection_select :away_team, Team.all, :id, :name %>
+	</div>
+
+	<div>
+		<%= f.label :start_at %>
+		<%= f.datetime_select :start_at %>
+	</div>
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

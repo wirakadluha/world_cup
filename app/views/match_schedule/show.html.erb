@@ -1,0 +1,15 @@
+<div class='row-fluid'>
+	<div class='span-8'>
+		<div class='white'>
+		
+		  <h1><%= @match_schedule.home_team.name %> vs <%= @match_schedule.away_team.name %></h1>
+		 
+		  <p>
+		  	JADWAL PERTANDINGAN <%= @match_schedule.start_at %>
+		  </p>
+
+		  <%= link_to 'Edit', edit_match_schedule_path(@match_schedule) %>
+		  <%= link_to 'Cancel', teams_path(@match_schedule) %>
+		</div>
+	</div>
+</div>

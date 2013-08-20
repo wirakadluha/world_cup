@@ -20,6 +20,11 @@
 						<td>:</td>
 						<td><%= f.text_field :name_kode %></td>
 					</tr>
+					<tr>
+						<td>Match Schedule</td>
+						<td>:</td>
+						<td><%= f.collection_select :match_schedule_id, MatchSchedule.all, :id, :home_team_id %></td>
+					</tr>
 				<tr>
 					<td colspan = '3'><%= f.submit %>
 				</tr>

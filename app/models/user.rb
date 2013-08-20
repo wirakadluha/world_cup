@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
   attr_accessible :email, :password,:remember_me, :password_confirmation, :first_name, :last_name
   # attr_accessible :title, :body
+
+  has_many :comments
   def name
     "#{first_name} #{last_name}"
 end

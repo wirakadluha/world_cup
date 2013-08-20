@@ -21,9 +21,55 @@
 						<td><%= f.text_field :number_player%></td>
 					</tr>
 					<tr>
-						<td>position</td>
+						<td>age</td>
 						<td>:</td>
-						<td><%= f.text_field :position%></td>
+						<td><%= f.text_field :age%></td>
+					</tr>
+					<tr>
+						<td>height</td>
+						<td>:</td>
+						<td><%= f.text_field :height%></td>
+					</tr>
+					<tr>
+						<td>weight</td>
+						<td>:</td>
+						<td><%= f.text_field :weight%></td>
+					</tr>
+					<tr>
+						<td>foot</td>
+						<td>:</td>
+						<td><%= f.text_field :foot%></td>
+					</tr>
+					<tr>
+						<td>market_value</td>
+						<td>:</td>
+						<td><%= f.text_field :market_value%></td>
+					</tr>
+					<tr>
+						<td>birth_date</td>
+						<td>:</td>
+						<td><%= f.text_field :birth_date%></td>
+					</tr>
+
+					<tr>
+						<td>birth_place</td>
+						<td>:</td>
+						<td><%= f.text_field :birth_place%></td>
+					</tr>
+					<tr>
+						<td>national</td>
+						<td>:</td>
+						<td><%= f.text_field :national%></td>
+					</tr>
+					<tr>
+						<td>player_agent</td>
+						<td>:</td>
+						<td><%= f.text_field :player_agent%></td>
+					</tr>
+					<tr>
+						<td>Team</td>
+						<td>:</td>
+						<td><%= f.collection_select :team_id, Team.all, :id, :name %></td>
 					</tr>
 					<tr>
 						<td>image</td>

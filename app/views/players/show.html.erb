@@ -32,8 +32,6 @@
 				</tbody>
 			</table>
 		</div>
-	
-
 		<p class="hl_startseite mt10 pp p">The profile for <%=@player.name%></p>
 		<p></p>
 	    <ul class="thumbnails">
@@ -49,7 +47,7 @@
 			      			<table class="tabelle_spieler s10" cellpadding="0" cellspacing="1">
 								<tbody>
 									<tr>
-									    <td style="width:130px;">Name in native country:</td>
+									    <td style="width:130px;">Name in native Country:</td>
 									    <td class="fn n">
 									    	<span class="given-name s10"><%=@player.name%></span>
 									    </td>
@@ -69,6 +67,10 @@
 									<tr>
 										<td>Height:</td>
 										<td><%=@player.height%></td>
+									</tr>
+									<tr>
+										<td>Weight:</td>
+										<td><%=@player.weight%></td>
 									</tr>
 									<tr>
 										<td>Nationality:</td>
@@ -108,13 +110,69 @@
 				      		<a href="" class="btn btn-primary"> informasi
 				      		</a>
 				      		<a href="" class="btn btn-primary"> informasi2
-
 				      		</a>
 				      	</p>
 			      </div>
 			   </div>
 			</li>
-		</ul>		
+		</ul>
+  <%= link_to root_path, class: 'btn' do %>
+    
+    <i class='icon-thumbs-up'></i>
+    <span>Like</span>
+  <% end %>
+<div class='white'>
+		<% if !@player.comments.any? %>
+			<h4>There is no comment, be the first to submit</h4>
+		<% else %>
+			<h4><% pluralize(@player.comments.count, 'Comment') %></h4>
+		<% end %>
+		<tr class='comments'>
+			<% @player.comments.each_with_index do |comment, i| %>
+			<br>
+				<td>
+					<%= comment.user.name %>
+				</td> | 
+				<td>
+					  <%= comment.created_at %>
+
+				</td> <br>
+				<td>
+					<%= comment.message %>				
+				</td><br>
+				<% end %>
+			</div>
+		</tr>
+	</div>
+
+
+
+
+
+
+
+		    <br>
+		<% if user_signed_in? %>
+			<%= form_for current_user.comments.build(commentable: @player) do |f| %>
+				<%= f.hidden_field :commentable_id %>
+				<%= f.hidden_field :commentable_type %>
+				<div class='field'>
+					<div class='white'>
+					<hr style='width:32%;'>
+					<%= f.label :message %><br>
+					<%= f.text_area :message, style: 'height: 100px; width: 300px;' %>
+				</div>
+				<%= f.submit 'Submit Comment', class: 'btn btn-primary' %>
+			<% end %>
+		<% end %>
+	</div>
+
+
+
+
+
+
+
 		  <div class="bs-docs-example2">
 		    <br>
 		  <div class='clearer '></div>
@@ -137,5 +195,21 @@
 
 	</div>
 </div>
+
+
+<% if user_signed_in? %>
+			<%= form_for current_user.comments.build(commentable: @player) do |f| %>
+				<%= f.hidden_field :commentable_id %>
+				<%= f.hidden_field :commentable_type %>
+				<div class='field'>
+					<hr style='width:50%;'>
+					<%= f.label :message %><br>
+					<%= f.text_area :message, style: 'height: 100px; width: 300px;' %>
+				</div>
+				<%= f.submit 'Submit Comment', class: 'btn btn-primary' %>
+			<% end %>
+		<% end %>
+	</div>
+
 
 

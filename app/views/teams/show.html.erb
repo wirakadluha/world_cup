@@ -1,13 +1,16 @@
 <div class='row-fluid'>
 	<div class='span-8'>
-		<p><%=@player.email%>
-			<p><%=image_tag @player.image_tag%></p>
-		<div class='span-8'>
+		
 		  <h1><%= @team.name %></h1>
-		  <p>
-		  </p>
+		  
+		  <ul>
+		  	<% @team.players.each do|player|%>
+		  	<li><%= link_to player.name, player_path(player)%></li>
+		 	<%end%>
+		  </ul>
+
 		  <%= link_to 'Edit', edit_team_path(@team) %>
 		  <%= link_to 'Cancel', teams_path(@team) %>
-		</div>
+		
 	</div>
 </div>

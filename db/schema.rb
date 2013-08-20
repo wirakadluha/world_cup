@@ -11,45 +11,52 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130820033044) do
+ActiveRecord::Schema.define(:version => 20130820064932) do
 
   create_table "coaches", :force => true do |t|
     t.string   "name"
     t.integer  "age"
     t.string   "national"
-    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "commentable_type"
+    t.string   "commentable_id"
+    t.text     "message"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "user_id"
   end
 
   create_table "match_schedules", :force => true do |t|
     t.integer  "home_team_id"
     t.integer  "away_team_id"
     t.datetime "start_at"
-    t.string   "slug"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "slug"
   end
-
-  add_index "match_schedules", ["slug"], :name => "index_match_schedules_on_slug", :unique => true
 
   create_table "player_positions", :force => true do |t|
     t.string   "name"
     t.integer  "back_number"
     t.string   "position"
     t.string   "national"
-    t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "slug"
   end
 
   create_table "players", :force => true do |t|
     t.string   "name"
     t.integer  "number_player"
     t.string   "slug"
-    t.integer  "team_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "team_id"
     t.string   "position"
     t.integer  "age"
     t.string   "birth_date"
@@ -70,16 +77,14 @@ ActiveRecord::Schema.define(:version => 20130820033044) do
     t.string   "name_team2"
     t.integer  "score_team1"
     t.integer  "score_team2"
-    t.string   "slug"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.string   "slug"
     t.datetime "date"
     t.string   "name_scoring_goals"
     t.string   "ball_position_team1"
     t.string   "ball_position_team2"
   end
-
-  add_index "scores", ["slug"], :name => "index_scores_on_slug", :unique => true
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

@@ -7,4 +7,6 @@ class Coach < ActiveRecord::Base
 
   has_one :team
   acts_as_taggable
+
+  has_many :comments, as: :commentable
 end
