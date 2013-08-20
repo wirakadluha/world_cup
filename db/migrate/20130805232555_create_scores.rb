@@ -8,7 +8,6 @@ class CreateScores < ActiveRecord::Migration
       t.string :slug
       t.timestamps
     end
-          add_index :scores, :slug, :unique => true
-
+    add_index :scores, :slug, :unique => true
   end
 end

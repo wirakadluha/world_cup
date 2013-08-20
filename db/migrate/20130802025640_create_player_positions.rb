@@ -1,4 +1,4 @@
-class CreatePlayer_positions < ActiveRecord::Migration
+class CreatePlayerPositions < ActiveRecord::Migration
   def change
     create_table :player_positions do |t|
       t.string :name
@@ -9,6 +9,5 @@ class CreatePlayer_positions < ActiveRecord::Migration
 
       t.timestamps
     end
-      add_index :teams, :slug, :unique => true
   end
 end
