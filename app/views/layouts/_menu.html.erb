@@ -1,5 +1,5 @@
 <div class="navbar navbar-fixed-top">
-  <div class="navbar navbar-inverse">
+  <div class="navbar navbar-inverse" >
     <div class="navbar-inner">
       <div class="container" id="full-screen-backoffice">
         <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
@@ -32,10 +32,12 @@
                   <b class="caret">
                   </b> 
                 </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="">An Raka, Profile</a>
-                  </li>
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                 </ul>
               </li>
            </li>
@@ -48,7 +50,12 @@
             </li>
             <br>
             <li class="dropdown">
-              <a href="/users/sign_in">LOGIN</a>
+            <% if user_signed_in? %>
+              <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete,
+                class: 'dropdown' %>
+            <% else %>
+              <%= link_to 'SIGN IN', new_user_session_path, class: 'dropdown' %>
+            <% end %>
             </li>
             <li class="dropdown">
               <a href="/users/sign_up">SIGN UP</a>
@@ -59,12 +66,13 @@
     </div>  
   </div>
 </div>  
+
 <br><br><br>
   <%= image_tag '/assets/aerow_red.png',style: 'width:250px; float:left;' %>
   <div class="page-header " style="border:0px; border-bottom: 3px solid white;">
-    <div class="white">
+    <div class="black">
       <br>
-      <h1>WELCOME TO MY DREAMS<br><small><div class="white">An Raka,inc</div></small>
+      <h1>WELCOME TO MY DREAMS<br><small><div class="black">An Raka,inc</div></small>
       <div style="margin-top:100px;"></div>
       </h1>
     </div>

@@ -1,6 +1,23 @@
 <div class='row-fluid'>
 	<div class='span-8'>
 		<div class='span-8'>
+			<div class="white">
+				<div></br>
+					<p class="colr">List Name Team</p>
+						<select multiple="multiple">
+						 <% @teams.each do |team| %>
+							<option value="<%= team.id%>"><%= team.name %></option>
+						 <% end %>
+				</select>
+			</div>
+			<div>
+				<p class="colr">Language</p>
+					<select multiple="multiple">
+						<option>English</option>
+						<option>Indonesian</option>
+						<option>Malaysia</option>
+					</select>
+			</div>
 		
 			<p class="lead">
 				<h1> List All Team </h6>

@@ -1,45 +1,20 @@
-<!-- <div class='span3' style='margin-top:20px;'>
-		<%= link_to 'Log out', destroy_user_session_path, class:"btn btn-large btn-block btn-danger", method: :delete %>
-	</div> -->
-  <div class="panel">
-    <div class="panel-heading">
+<div class="panel">
+  <div class="panel-heading">
       <h3 class="panel-title">
-        <a class="accordion-toggle kanan" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          <br>
-          Collapsible Group Item #2
+        <a class="accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        Collapsible Group Item #2
         </a>
       </h3>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse">
-      <div class="panel-body">
-        <P align="right">
-        heard of them accusamus labore sustainable VHS.
-      </p>
-      </div>
-    </div>
+  </div>
+</div>
+  <div id="collapseTwo" class="panel-collapse collapse">
+    <div class="panel-body">
+        <P align="">
+          heard of them accusamus labore sustainable VHS.
+        </p>
+     </div>
   </div>
 
-<div class="white">
-	<div></br>
-		<p class="colr">List Name Team</p>
-			<select multiple="multiple">
-			<% @teams.each do |team| %>
-				<option value="<%= team.id%>"><%= team.name %></option>
-			<% end %>
-		</select>
-	</div>
-
-
-	<div>
-		<p class="colr">Language</p>
-			<select multiple="multiple">
-				<option>English</option>
-				<option>Indonesian</option>
-				<option>Malaysia</option>
-			</select>
-	</div>
-
-  
   <div class="panel">
     <div class="panel-heading">
       <h3 class="panel-title">
@@ -48,56 +23,99 @@
         </a>
       </h3>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
   </div>
-</div>
 
-
-
-Button trigger modal 
-  <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg ">Launch demo modal</a>
-Modal 
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+  <div id="collapseThree" class="panel-collapse collapse">
+    <div class="panel-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high .
     </div>
   </div>
 
-	<%= render 'form' %>
-	<br>
-	<div class='clearer '></div>
-	<footer class='footer white'>
-	  <div class='container'>
-	    <address>
-	      <strong>An_Raka, Inc.</strong><br>
-	      795 Folsom Ave, Suite 600<br>
-	      San Francisco, CA 94107<br>
-	      <abbr title="Phone">Phone:</abbr> (+628) 896-8822
-	    </address>
-	    <address>
-	      <strong>Full Name</strong><br>
-	      <a href="https://www.facebook.com/Achilles.Raka">https://www.facebook.com/Achilles.Raka</a>
-	    </address>
-	  </div>
-	</footer> 
-</div>
+  <a data-toggle="modal" href="#myModal" class="btn btn-large btn-primary btn-lg ">Launch demo modal</a>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Catatan</h4>
+          </div>
+          <div class="modal-body">
+            An Raka, Inc
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+    <div style='width: 500px; margin: 0px auto;'>
+      <div class="bs-docs-example">
+        <div id="myCarousel" class="carousel slide">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item carousel-item active">
+              <div style='width: 800px; height: 480px;'>
+                <img src="/assets/ZlatanIbrahimovic.jpg" alt="1" width="500">
+              </div>
+              
+              <div class="carousel-caption">  
+                <h4>First Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              </div>
+            </div>
+            <div class="item carousel-item">
+              <div style='width: 800px; height: 480px;'>
+                <img src="/assets/ZlatanIbrahimovic.jpg" alt="2" width="500">
+              </div>
+              
+              <div class="carousel-caption">
+                <h4>Second Thumbnail label</h4>
+                <p>2</p>
+              </div>
+            </div>
+            <div class="item carousel-item">
+              <div style='width: 800px; height: 480px;'>
+                <img src="/assets/pirlo.jpeg" alt="3"  width="620">
+              </div>
+              
+              <div class="carousel-caption">
+                <h4>Third Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+        </div>
+      </div>
+    </div>
+
+   <div class="bs-docs-example2">
+  	<br>
+    <div class='clearer '></div>
+  	<footer class='footer black'>
+  	  <div class='container'>
+  	    <address>
+  	      <strong>An_Raka, Inc.</strong><br>
+  	      795 Folsom Ave, Suite 600<br>
+  	      San Francisco, CA 94107<br>
+  	      <abbr title="Phone">Phone:</abbr> (+628) 896-8822
+  	    </address>
+  	    <address>
+  	      <strong>Full Name</strong><br>
+  	      <a href="https://www.facebook.com/Achilles.Raka">https://www.facebook.com/Achilles.Raka</a>
+  	    </address>
+  	  </div>
+  	</footer> 
+  </div>
+</div>
 
   
 
@@ -201,4 +219,4 @@ margin-right:200px;
 
 </html>
 
- <p class="pos_fixed">Some more text</p> -->
+ <p class="pos_fixed">Some more text</p>

@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
    validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
    validates_uniqueness_of :email
 
-   devise :database_authenticatable, :registerable, :confirmable, :lockable,
+   devise :database_authenticatable, :registerable, :confirmable, 
+        #:lockable,
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
   attr_accessible :email, :password,:remember_me, :password_confirmation, :first_name, :last_name
   # attr_accessible :title, :body

@@ -1,5 +1,21 @@
 <div class='row-fluid'>
   <div class='span-8'>
+
+  	<% if !user_signed_in? %>
+		<div>
+			</br>
+			<%= form_for(User.new, :as => 'user', :url => session_path('user')) do |f| %>
+			<% end %>
+		</div>
+	<% end %>
+		<% if user_signed_in? %>
+			<%= render "login_links", resource: current_user, 
+					resource_name: current_user.class.name.downcase, devise_mapping: Devise.mappings[:user] %>
+		<% else %>
+			<%= render "login_links", 
+			    resource: User.new, resource_name: 'user', devise_mapping: Devise.mappings[:user] %>
+		<% end %>
+		
   </div>
 </div>
 
