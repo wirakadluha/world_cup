@@ -1,22 +1,44 @@
-<h2>Sign </h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
 
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		
+    </head>
+    <body>
+        <div class="container">
+		
+			<!-- Codrops top bar -->
+            
+			<header>
+			
+			</header>
+			<h2><div class= 'center'>Sign </div></h2>
+			
+			<section class="main">
+				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-1'}) do |f| %>
+					<p class="field">
+						<%= f.text_field :email, placeholder: 'Username or Email', id: 'username_or_email' %>
+						<i class="icon-user icon-large"></i>
+					</p>
+
+					<p class="field">
+						<%= f.password_field :password, id: :username_or_email, placeholder: 'Password' %>
+						<i class="icon-lock icon-large"></i>
+					</p>
+					<p>
+						<%= f.check_box :remember_me %> <%= f.label :remember_me %>
+						<%= render "devise/shared/links" %>
+					</p>
+					<p class="submit">
+					
+						<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+					</p>
+				<% end %>
+			</section>
+        </div>
+    </body>
+</html>
 
 
 
