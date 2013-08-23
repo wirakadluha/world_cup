@@ -7,7 +7,7 @@
 				<tbody>
 					<tr>
 						<td rowspan="3" class="" style="width:58px;background-color:#fff;margin:0px;padding:0 3px;border:1px solid #bbb;">
-							<img src="/assets/psg.jpg" alt="Paris Saint-Germain" title="Paris Saint-Germain">
+						<%= image_tag @player.image_team_url, style:'width; 300px; hight:200px;' %>
 						</td>			
 						<td class="" style="">
 							<h1 class="font" style="color:blue;"><%=@player.number_player%> <%=@player.name%>
@@ -16,15 +16,12 @@
 					</tr>
 					<tr>
 						<td>
-							<a title="Paris Saint-Germain">Paris Saint-Germain
-							</a> 
-							<a title="Paris Saint-Germain">Ligue 1
-							</a> (France)
+							<%=@player.national%> 
 						</td>
 					</tr>
 					<tr>
 						<td>Current national player:
-							<a>Sweden
+							<a><%=@player.national%>
 							</a>
 							<a></a>
 						</td>

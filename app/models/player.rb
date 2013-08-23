@@ -11,13 +11,15 @@ class Player < ActiveRecord::Base
   :birth_date, 
   :birth_place, 
   :national, 
-  :player_agent
+  :player_agent,
+  :image_team
  belongs_to :team
  # has_one :team
   
   has_many :player_positions
   acts_as_taggable
   mount_uploader :image, PlayerImageUploader
+  mount_uploader :image_team, PlayerImageTeamUploader
 
   has_many :comments, as: :commentable
 
