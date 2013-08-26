@@ -6,4 +6,5 @@ class MatchSchedule < ActiveRecord::Base
   
   belongs_to :home_team, class_name: 'Team', foreign_key: :home_team_id
   acts_as_taggable
+  
 end

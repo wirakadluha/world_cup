@@ -14,8 +14,6 @@ class Player < ActiveRecord::Base
   :player_agent,
   :image_team
  belongs_to :team
- # has_one :team
-  
   has_many :player_positions
   acts_as_taggable
   mount_uploader :image, PlayerImageUploader

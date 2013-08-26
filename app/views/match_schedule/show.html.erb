@@ -1,12 +1,82 @@
 <div class='row-fluid'>
 	<div class='span-8'>
-		<div class='white'>
+		<div class='white center'>
 		
 		  <h1><%= @match_schedule.home_team.name %> vs <%= @match_schedule.away_team.name %></h1>
 		 
 		  <p>
 		  	JADWAL PERTANDINGAN <%= @match_schedule.start_at %>
 		  </p>
+
+
+
+	<div id="page-wrap">
+		<div class="h11">LIST NAME PLAYER TEAM</div>
+    <div style='float:left' class="lebar50">
+      <table class="lebar_tabel">
+        <thead>
+          <tr class="persist-header">
+            <th>
+              <div class='center'>
+                <%= @match_schedule.home_team.name %>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @match_schedule.home_team.players.each do |player| %>
+            <tr>
+              <td><%= player.name %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div style='float:right' class="lebar50">
+      <table class="lebar_tabel">
+        <thead>
+          <tr class="persist-header">
+            <div class="center">
+             <th><%= @match_schedule.away_team.name %></th>
+            </div>
+          </tr>
+        </thead>
+        <tbody>
+          <% @match_schedule.away_team.players.each do |player| %>
+            <tr>
+              <td><%= player.name %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div style='clear:both'></div>
+	</div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		  <%= link_to 'Edit', edit_match_schedule_path(@match_schedule) %>
 		  <%= link_to 'Cancel', teams_path(@match_schedule) %>

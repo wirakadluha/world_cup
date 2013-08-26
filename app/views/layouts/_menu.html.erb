@@ -7,17 +7,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="http://localhost:3000/">People OF Dream</a>
-        <div class="nav-collapse">
-          <ul class="nav">
+          <ul class="nav nav-pills">
             <li class="dropdown">
-              <a href="">Live Streaming</a>
+              <div class="nav-collapse">
+                <nav class="cl-effect-5">
+                  <a class="" href="http://localhost:3000/"><span data-hover="P.O.D">PEOPLE OF DREAM</span></a>
+                </nav>
             </li>
           </ul>
           <ul class="nav nav-pills">
-            <li class="dropdown">
+            <li class="dropdown navbarmargin">
               <a class="dropdown-toggle" data-toggle="dropdown"> List Team  
-                <b class="caret">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b class="caret">
                 </b> 
               </a>
               <ul class="dropdown-menu">
@@ -27,26 +28,23 @@
                   <%end%>
                 </li>
               </ul>
-              <li class="dropdown">
+              <li class="dropdown navbarmargin">
                 <a class="dropdown-toggle" data-toggle="dropdown"> Match Schedule
                   <b class="caret">
                   </b> 
                 </a>
                 <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-                  
-                <li>
-                  <%MatchSchedule.all.each do |match_schedule|%>
-                  <%= link_to "#{match_schedule.home_team.name} vs #{match_schedule.away_team.name}", match_schedule_path(match_schedule)%>
-                  <%end%>
-                </li>
-
-
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                  <li>
+                    <%MatchSchedule.all.each do |match_schedule|%>
+                    <%= link_to "#{match_schedule.home_team.name} vs #{match_schedule.away_team.name}", match_schedule_path(match_schedule)%>
+                    <%end%>
+                  </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                 </ul>
               </li>
            </li>
           </ul>
-          <ul class="nav pull-right">
+          <ul class="nav pull-right navbarmargin">
             <li>
               <form class="navbar-search pull-left">
                 <input type="text" class="search-query" placeholder="Search">
@@ -70,10 +68,6 @@
     </div>  
   </div>
 </div>  
-
-
-
-
   <br><br>
   <%= image_tag '/assets/aerow_red.png',style: 'width:250px; float:left;' %>
   <div class="page-header " style="border:0px; border-bottom: 3px solid white;">
@@ -87,13 +81,10 @@
                     <span>MY DREAMS</span>
                     <span>YOUR DREAMS</span>
                     <span>PEOPLE OF DREAMS</span>
-
                     <span>INDONESIA</span>
                     <span>INDONESIA</span>
                     <span>MY LIFE</span>
-                  
-<small><div class="black">An Raka,inc</div></small></div>
-
+                    <small><div class="black">An Raka,inc</div></small></div>
                 </h2>
               </section>
               <h2 class="rw-sentence-IE">Real poetry is like creating beautiful butterflies with a silent touch of spice</h2>
