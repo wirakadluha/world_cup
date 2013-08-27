@@ -11,7 +11,7 @@
             <li class="dropdown">
               <div class="nav-collapse">
                 <nav class="cl-effect-5">
-                  <a class="" href="http://localhost:3000/"><span data-hover="P.O.D">PEOPLE OF DREAM</span></a>
+                  <a href="http://localhost:3000/"><span data-hover="P.O.D">PEOPLE OF DREAM</span></a>
                 </nav>
             </li>
           </ul>
@@ -45,12 +45,23 @@
            </li>
           </ul>
           <ul class="nav pull-right navbarmargin">
-            <li>
-              <form class="navbar-search pull-left">
-                <input type="text" class="search-query" placeholder="Search">
-              </form>
-            </li>
+
+
+              <li>
+              <%= form_tag search_index_path, method: :get, class: 'navbar-search pull-left', id: 'cari' do %>
+                <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
+              <% end %>
+          </li>
+
+
+
+              
+
+
             <br>
+            
+
+
             <li class="dropdown">
             <% if user_signed_in? %>
               <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete,

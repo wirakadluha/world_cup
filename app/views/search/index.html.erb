@@ -1,0 +1,10 @@
+<div class='row-fluid margin'>
+	<div class='form-search'>
+		<% if @players.present? %>
+			<h2><%= @players.count %> @players detected </h2>
+			<% @players.each do |player| %>
+				<p><%= link_to player.name, player_path(player) %></p>
+			<% end -%>
+		<% end -%>
+	</div>
+</div>

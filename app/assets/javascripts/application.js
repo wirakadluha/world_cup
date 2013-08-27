@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+//= require example/flowplayer-3.2.6.min
