@@ -1,5 +1,5 @@
-
-$(document).ready(function() {
+$(document).ready(function() 
+{
 	 $('#cari').on('submit', function(event) {
 
     var q = document.forms["cari"]["q"].value;

@@ -13,8 +13,8 @@ class MatchScheduleController < ApplicationController
 	end
 
 	def create
-		@match_schedule = MatchSchedule.new(params[:MatchSchedule])
-	if @match_schedule.save
+		@match_schedule = MatchSchedule.new(params[:match_schedule])
+		if @match_schedule.save
 		redirect_to match_schedule_path(@match_schedule)
 	else
 		render :new
@@ -29,7 +29,7 @@ class MatchScheduleController < ApplicationController
 
 	def update
 		@match_schedule = MatchSchedule.find(params[:id])
-		if @match_schedule.update_attributes(params[:MatchSchedule])
+		if @match_schedule.update_attributes(params[:match_schedule])
 		redirect_to match_schedule_path(@match_schedule)
 		else
 			render :edit

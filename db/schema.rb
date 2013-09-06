@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130823040652) do
+ActiveRecord::Schema.define(:version => 20130905080942) do
 
   create_table "coaches", :force => true do |t|
     t.string   "name"
@@ -20,15 +20,19 @@ ActiveRecord::Schema.define(:version => 20130823040652) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "slug"
+    t.string   "image"
+    t.string   "image_team"
+    t.integer  "team_id"
   end
 
   create_table "comments", :force => true do |t|
     t.string   "commentable_type"
     t.string   "commentable_id"
     t.text     "message"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.integer  "user_id"
+    t.boolean  "removed",          :default => false
   end
 
   create_table "match_schedules", :force => true do |t|
@@ -37,16 +41,6 @@ ActiveRecord::Schema.define(:version => 20130823040652) do
     t.datetime "start_at"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-    t.string   "slug"
-  end
-
-  create_table "player_positions", :force => true do |t|
-    t.string   "name"
-    t.integer  "back_number"
-    t.string   "position"
-    t.string   "national"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
     t.string   "slug"
   end
 
@@ -116,10 +110,10 @@ ActiveRecord::Schema.define(:version => 20130823040652) do
   add_index "teams", ["slug"], :name => "index_teams_on_slug", :unique => true
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "first_name",             :default => "", :null => false
-    t.string   "last_name",              :default => "", :null => false
+    t.string   "email",                  :default => "",    :null => false
+    t.string   "encrypted_password",     :default => "",    :null => false
+    t.string   "first_name",             :default => "",    :null => false
+    t.string   "last_name",              :default => "",    :null => false
     t.string   "slug"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -137,8 +131,10 @@ ActiveRecord::Schema.define(:version => 20130823040652) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.string   "authentication_token"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+    t.string   "image"
+    t.boolean  "super_admin",            :default => false
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

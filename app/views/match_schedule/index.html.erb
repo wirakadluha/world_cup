@@ -1,0 +1,13 @@
+
+<h1> List All Match Schedulle </h1>
+<ul>
+	<%@match_schedule.each do |match_schedule| %>
+	<li><%= link_to match_schedule.home_team_id, match_schedule_path(match_schedule) %> | 
+		<%= link_to 'Edit', edit_match_schedule_path(match_schedule)%> |
+	    <%= link_to 'Delete', match_schedule_path(match_schedule), method: :delete%>
+	</li>
+	<%end%>
+</ul>
+
+<%= link_to 'New Match Schedule', new_match_schedule_path, class: 'btn btn-success' %>
+				

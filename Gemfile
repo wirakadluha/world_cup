@@ -26,6 +26,7 @@ gem 'friendly_id'
 gem 'acts-as-taggable-on'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'carrierwave'
+gem 'yaml_db'
 
 
 

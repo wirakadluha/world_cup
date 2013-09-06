@@ -13,9 +13,11 @@ class User < ActiveRecord::Base
    devise :database_authenticatable, :registerable, :confirmable, 
         #:lockable,
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
-  attr_accessible :email, :password,:remember_me, :password_confirmation, :first_name, :last_name
+  attr_accessible :email, :password,:remember_me, :password_confirmation,
+   :first_name, :last_name, :image
   # attr_accessible :title, :body
 
+  mount_uploader :image, PlayerImageUploader
   has_many :comments
   def name
     "#{first_name} #{last_name}"

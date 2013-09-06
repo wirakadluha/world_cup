@@ -1,0 +1,49 @@
+.lebar_table{
+	width: 50%
+}
+.thead {
+background: #000000;
+font-size: 13px;
+text-align: center;
+}
+.table {
+border-collapse: collapse;
+}
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+table tbody tr td:first-child {
+border-left: 1px solid #000000
+;
+border-right: 1px solid #000000;
+}
+table tbody tr td {
+padding: 3px 5px;
+border-right: 1px solid #000000;
+border-bottom: 1px solid #000000;
+}
+
+table th, table td {
+line-height: 30px;
+vertical-align: middle;
+border: 1px solid #000000;
+}
+
+.tablegroup1{
+	width: 450px;
+	float: left;
+	margin-right: 25px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.tablegroup{
+	width: 450px;
+	margin-left: 25px;
+	margin-right: 40px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}

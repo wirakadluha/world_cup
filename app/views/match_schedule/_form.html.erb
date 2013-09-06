@@ -1,20 +1,39 @@
-<%= form_for(@match_schedule) do |f| %>
-	<div>
-		<%= f.label :home_team %>
-		<%= f.collection_select :home_team, Team.all, :id, :name %>
-	</div>
-
-	<div>
-		<%= f.label :away_team %>
-		<%= f.collection_select :away_team, Team.all, :id, :name %>
-	</div>
-
-	<div>
-		<%= f.label :start_at %>
-		<%= f.datetime_select :start_at %>
-	</div>
-
-	<div>
-		<%= f.submit %>
-	</div>
+<% if @match_schedule.errors.present? %>
+	<ul>
+		<% @match_schedule.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+		<%end%>
+	</ul>
 <% end %>
+<center>
+	<%= form_for @match_schedule, url: ( @match_schedule.new_record? ? match_schedule_index_path : match_schedule_path(@match_schedule)), html: {multipart: true} do |f| %>
+		<table>
+			<tr>
+				<td>
+					<%= f.label :home_team %>
+					<%= f.collection_select :home_team_id, Team.all, :id, :name %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					<%= f.label :away_team %>
+					<%= f.collection_select :away_team_id, Team.all, :id, :name %>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= f.label :start_at %>
+					<%= f.datetime_select :start_at %>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= f.submit %>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+</center>

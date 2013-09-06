@@ -13,7 +13,7 @@ bottom: 0px;
 .clearer {
 	clear: both;body {background-color: yellow}
 #page {
-	width: 1000px;
+	width: 100px;
 	min-height: 800px;
 	border:solid 1px #ccc;
 	background-color: #fff;
@@ -80,7 +80,7 @@ border: 1px
 solid #999;
 padding: 0;
 margin-top: 2px;
-width: 32%;
+width: 50%;
 }
 
 .font {
@@ -135,30 +135,14 @@ text-align: center;
 	background:	#C8C2C2;	
 
 }
-/*
-body {background-color: yellow}
-.buletan {
-	width: 1000px;
-	min-height: 800px;
-	border:solid 1px #ccc;
-	background-color: #fff;
-	padding: 10px;
-	padding-left: 20px;
-	margin-right: 20px;
-	margin: auto;
-	margin-top: 50px;
-	border-radius: 57px 54px 65px 66px;
-}
-
-body {
-	background: image-url('/assets/stamfore-bridge.jpg');
-}
-*/
 
 .kanan{
 	float: right;
 	margin-right: 5px;
 
+}
+.kiri{
+text-align: left;
 }
 
 .carousel {
@@ -251,4 +235,17 @@ border-radius: 20px;
 
 .lebar50{
 	width:50%;
+}
+
+.tengahfoto{
+	width:50%;
+
+}
+.vidio{
+	width:920px;
+	height:530px;
+}
+
+.marginbawah{
+	margin-bottom: 200px;
 }

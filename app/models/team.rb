@@ -2,16 +2,15 @@ class Team < ActiveRecord::Base
 	  extend FriendlyId
   friendly_id :name, use: :slugged 
 
-validates :name_kode, length: { maximum: 3 }
+  validates :name_kode, length: { maximum: 3 }
  
 	validates :name, :name_kode, presence:true, uniqueness: true
 	
-  attr_accessible :name, :name_kode, :match_schedule_id
-  #has_many :player
+  attr_accessible :name, :name_kode, :match_schedule_id,:coach_id
+  
   belongs_to :matchschedule
   belongs_to :coach
-  #belongs_to :player
-
+  
   has_many :players
 
    belongs_to :score

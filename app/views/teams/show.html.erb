@@ -1,17 +1,40 @@
 <div class='row-fluid'>
 	<div class='span-8'>
 		
-		 <h4><%= @team.name %></h4>
-		  
-		  <ul>
-		  	<% @team.players.each do|player|%>
-		  	<li><%= link_to player.name, player_path(player)%></li>
-		 	<%end%>
-		  </ul>
+    <center>
+     <h1>National: <%= @team.name %></h1>
 
-		  <%= link_to 'Edit', edit_team_path(@team) %>
-		  <%= link_to 'Cancel', teams_path(@team) %>	
-	</div>
+      </center>
+      <ul class="mh-menu ol_ul aa">
+        <div class="aa">
+          <li>
+            <a>
+              <span>Coach</span>
+              <span><%= @team.coach.name %></span>
+              <span><%= link_to 'info', coach_path(@team.coach)%></span>
+            </a><%= image_tag @team.coach.image_url, style:'width: 290px; hight:200px;' %>
+          </li>
+
+          <% @team.players.each do|player|%>
+            <li>
+              <a>
+                <span><%=player.position%></span>
+                <span><%= player.name%></span>
+                <span><%= link_to 'Info', player_path(player) %></span>
+
+              </a>
+              <td rowspan="3" class="" style="width:58px;background-color:#fff;margin:0px;padding:0 3px;border:1px solid #bbb;">
+                <%= image_tag player.image_url, style:'width: 290px; hight:0px;'%>
+              </td>
+            </li>
+          <%end%>
+        </div>
+      </ul>
+      <div class="aa marginbawah">
+      <%= link_to 'Edit', edit_team_path(@team) %>
+      <%= link_to 'Cancel', teams_path(@team) %> 
+      </div> 
+  </div>
 </div>
 
 
@@ -21,6 +44,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
     <div style='width: 500px; margin: 0px auto;'>
       <div class="bs-docs-example">
         <div id="myCarousel" class="carousel slide">
@@ -66,42 +116,9 @@
         </div>
       </div>
     </div>
-  
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ -->

@@ -1,18 +1,19 @@
 <div class='row-fluid'>
 	<div class='span-8'>
-	    <h1>
+	 <center>
+		<h1>
+			<%=@player.name%>
 		</h1>
+
+		<%= link_to 'Edit', edit_player_path(@player) %>
+		<%= link_to 'Cancel', players_path %>
 		<div class="element">
-			<table class="tabelle_spieler" cellpadding="0" cellspacing="1">
+			<table>
 				<tbody>
 					<tr>
-						<td rowspan="3" class="" style="width:58px;background-color:#fff;margin:0px;padding:0 3px;border:1px solid #bbb;">
-						<%= image_tag @player.image_team_url, style:'width; 300px; hight:200px;' %>
+						<td rowspan="3" class="" style="">
+						<%= image_tag @player.image_team_url, style:'width: 300px; hight:200px;' %>
 						</td>			
-						<td class="" style="">
-							<h1 class="font" style="color:blue;"><%=@player.number_player%> <%=@player.name%>
-							</h1>
-						</td>
 					</tr>
 					<tr>
 						<td>
@@ -29,83 +30,81 @@
 				</tbody>
 			</table>
 		</div>
-
-
-
-
-
-		
-		<p class="hl_startseite mt10 pp p">The profile for <%=@player.name%></p>
+		<p class="hl_startseite mt10 pp p tengahfoto">The profile for <%=@player.name%></p>
 		<p></p>
 	    <ul class="thumbnails">
-	       <li class="span4">
-			  <div class="thumbnail">
-			  	<%= image_tag @player.image_url, style:'width; 300px; hight:200px;' %>
+	        <div class="thumbnail tengahfoto">
+			  	<%= image_tag @player.image_url, style:'width: 300px; hight:200px;' %>
 			   	 <div class="caption">
 			      	<h3>
 			      		<div class="white"><%=@player.name%></div>
 			      	</h3>
 			      		<p>
 			      			<div class="white">
-			      			<table class="tabelle_spieler s10" cellpadding="0" cellspacing="1">
-								<tbody>
-									<tr>
-									    <td style="width:130px;">Name in native Country:</td>
-									    <td class="fn n">
-									    	<span class="given-name s10"><%=@player.name%></span>
-									    </td>
-								    </tr>
-									<tr>
-										<td>Date of birth:</td>
-										<td><a href="" class="s10" title="03.10.1981"><%=@player.birth_date%></a></td>
-									</tr>
-									<tr>
-										<td>Place of birth:</td>
-										<td><%=@player.birth_place%>&nbsp;<span class="" title="sweden: rosengard">&nbsp;</span></td>
-									</tr>
-									<tr>
-										<td>Age:</td>
-										<td><%=@player.age%></td>
-									</tr>
-									<tr>
-										<td>Height:</td>
-										<td><%=@player.height%></td>
-									</tr>
-									<tr>
-										<td>Weight:</td>
-										<td><%=@player.weight%></td>
-									</tr>
-									<tr>
-										<td>Nationality:</td>
-										<td>
-											<%=@player.national%>
-										</td>
-									</tr>
-									<tr>
-										<td>Position:</td>
-										<td><%=@player.position%></td>
-									</tr>
-									<tr>
-										<td>Foot:</td>
-										<td><%=@player.foot%></td>
-									</tr>
-									<tr>
-										<td>Market value:</td>
-										<td><%=@player.market_value%><!-- <span style="color:#777;padding:0;">30.000.000 €</span> -->
-										&nbsp;
-											<a href="https://www.facebook.com/Achilles.Raka" title="Market value - development: Zlatan Ibrahimovic">
-												<img src="/assets/market_value2.jpg" alt="Market value" title="Market value" width="10" height="10">
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>Player's agent:</td>
-										<td>
-											<a href="https://www.facebook.com/Achilles.Raka" class="s10"><%=@player.player_agent%> 
-											</a>
-										</td>
-									</tr>
-										</tbody>
+				      			<table class="tabelle_spieler s10" cellpadding="0" cellspacing="1">
+									<tbody>
+										<tr>
+										    <td style="width:130px;">Name in native Country:</td>
+										    <td class="fn n">
+										    	<span class="given-name s10"><%=@player.name%></span>
+										    </td>
+									    </tr>
+										<tr>
+											<td>Date of birth:</td>
+											<td><a href="" class="s10" title="03.10.1981"><%=@player.birth_date%></a></td>
+										</tr>
+										<tr>
+											<td>Position:</td>
+											<td><%=@player.position%></td>
+										</tr>
+										<tr>
+											<td>Number Player:</td>
+											<td><%=@player.number_player%></td>
+										</tr>
+										
+										<tr>
+											<td>Place of birth:</td>
+											<td><%=@player.birth_place%></td>
+										</tr>
+										<tr>
+											<td>Age:</td>
+											<td><%=@player.age%></td>
+										</tr>
+										<tr>
+											<td>Height:</td>
+											<td><%=@player.height%></td>
+										</tr>
+										<tr>
+											<td>Weight:</td>
+											<td><%=@player.weight%></td>
+										</tr>
+										<tr>
+											<td>Nationality:</td>
+											<td>
+												<%=@player.national%>
+											</td>
+										</tr>
+										<tr>
+											<td>Foot:</td>
+											<td><%=@player.foot%></td>
+										</tr>
+										<tr>
+											<td>Market value:</td>
+											<td><%=@player.market_value%><!-- <span style="color:#777;padding:0;">30.000.000 €</span> -->
+											&nbsp;
+												<a href="https://www.facebook.com/Achilles.Raka" title="Market value - development: Zlatan Ibrahimovic">
+													<img src="/assets/market_value2.jpg" alt="Market value" title="Market value" width="10" height="10">
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>Player's agent:</td>
+											<td>
+												<a href="https://www.facebook.com/Achilles.Raka" class="s10"><%=@player.player_agent%> 
+												</a>
+											</td>
+										</tr>
+									</tbody>
 								</table>
 						</div>
 			      	    </p>
@@ -115,113 +114,91 @@
 				      		<a href="" class="btn btn-primary"> informasi2
 				      		</a>
 				      	</p>
-			      </div>
-			   </div>
-			</li>
-		</ul>
-
-
-
-
-
-
-
-
-
-  <%= link_to root_path, class: 'btn' do %>
-    
-    <i class='icon-thumbs-up'></i>
-    <span>Like</span>
-  <% end %>
-<div class='white'>
-		<% if !@player.comments.any? %>
-			<h4>There is no comment, be the first to submit</h4>
-		<% else %>
-			<h4><% pluralize(@player.comments.count, 'Comment') %></h4>
-		<% end %>
-		<tr class='comments'>
-			<% @player.comments.each_with_index do |comment, i| %>
-			<br>
-				<td>
-					<%= comment.user.name %>
-				</td> | 
-				<td>
-					  <%= comment.created_at %>
-
-				</td> <br>
-				<td>
-					<%= comment.message %>				
-				</td><br>
-				<% end %>
+			     </div>
 			</div>
-		</tr>
-	</div>
+		</ul>
+	    <%= link_to root_path, class: 'btn' do %>
+	      <i class='icon-thumbs-up'></i>
+	      <span>Like</span>
+	    <% end %>
+	    
+		<div class='white'>
+				<% if !@player.comments.any? %>
+					<h4>There is no comment, be the first to submit</h4>
+				<% else %>
+					<h4><% pluralize(@player.comments.count, 'Comment') %></h4>
+				<% end %>
+				<tr class='comments'>
+					<% @player.comments.each_with_index do |comment, i| %>
+					<br>
+						<td>
+							<%= image_tag comment.user.image_url, style:'height: 50px; width:50px; margin-right:10px;' %>
+						</td>
+						<td>
+							<%= comment.user.name %>
+						</td> | 
+						<td>
+							  <%= comment.created_at %>
 
+						</td> <br>
+						<td>
+							<!-- tampilkan comment, tapi filter dulu berdasarkan field removed -->
+							  <!-- jika removed, maka di anggap junk comment -->
 
+							  <% if comment.removed? %>
+							    <p>this comment is removed by admin</p>
+							  <% else %>
+							    <p><%= comment.message %></p>
+							  <% end -%>
+							  
+							  <!-- jika ada user yang login, dan yang login adalah admin atau super_admin -->
+							  <!-- maka tampilkan button delete comment -->
 
-
-
-
-
-		    <br>
-		<% if user_signed_in? %>
-			<%= form_for current_user.comments.build(commentable: @player) do |f| %>
-				<%= f.hidden_field :commentable_id %>
-				<%= f.hidden_field :commentable_type %>
-				<div class='field'>
-					<div class='white'>
+							  <% if user_signed_in? && current_user.super_admin? %>
+							    <%= link_to 'Remove Comment', comment_path(comment), method: :delete %>
+							  <% end %>
+	
+						</td><br>
+						<% end %>
+				</tr>
+		</div>
+		<br>
+	  <% if user_signed_in? %>
+		<%= form_for current_user.comments.build(commentable: @player) do |f| %>
+			<%= f.hidden_field :commentable_id %>
+			<%= f.hidden_field :commentable_type %>
+			<div class='field'>
+				<div class='white'>
 					<hr style='width:32%;'>
 					<%= f.label :message %><br>
 					<%= f.text_area :message, style: 'height: 100px; width: 300px;' %>
 				</div>
-				<%= f.submit 'Submit Comment', class: 'btn btn-primary' %>
-			<% end %>
+			<%= f.submit 'Submit Comment', class: 'btn btn-primary' %>
+			</div>
 		<% end %>
-	</div>
-
-
-
-
-
-
-
-		  <div class="bs-docs-example2">
-		    <br>
-		  <div class='clearer '></div>
-		    <footer class='footer black'>
-		      <div class='container'>
-		        <address>
-		          <strong>An_Raka, Inc.</strong><br>
-		          795 Folsom Ave, Suite 600<br>
-		          San Francisco, CA 94107<br>
-		          <abbr title="Phone">Phone:</abbr> (+628) 896-8822
-		        </address>
-		        <address>
-		          <strong>Full Name</strong><br>
-		          <a href="https://www.facebook.com/Achilles.Raka">https://www.facebook.com/Achilles.Raka</a>
-		        </address>
-		      </div>
-		    </footer> 
-		  </div>
-		</div>
-
+	  <% end %>
+	  <div class="bs-docs-example2">
+	    <br>
+	  	<div class='clearer '></div>
+	    	<footer class='footer black'>
+		      	<div class='container'>
+		        	<address>
+			          	<strong>An_Raka, Inc.</strong><br>
+			          	795 Folsom Ave, Suite 600<br>
+			          	San Francisco, CA 94107<br>
+			          	<abbr title="Phone">Phone:</abbr> (+628) 896-8822
+		        	</address>
+		        	<address>
+		        		<strong>Full Name</strong><br>
+		        	    <a href="https://www.facebook.com/Achilles.Raka">https://www.facebook.com/Achilles.Raka</a>
+		        	</address>
+		        </div>
+	    	</footer> 
+	  	</div>
+	   </div>
+	  </center>
 	</div>
 </div>
-
-
-<% if user_signed_in? %>
-			<%= form_for current_user.comments.build(commentable: @player) do |f| %>
-				<%= f.hidden_field :commentable_id %>
-				<%= f.hidden_field :commentable_type %>
-				<div class='field'>
-					<hr style='width:50%;'>
-					<%= f.label :message %><br>
-					<%= f.text_area :message, style: 'height: 100px; width: 300px;' %>
-				</div>
-				<%= f.submit 'Submit Comment', class: 'btn btn-primary' %>
-			<% end %>
-		<% end %>
-	</div>
 
 
 

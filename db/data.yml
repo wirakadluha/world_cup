@@ -1,0 +1,683 @@
+
+---
+coaches:
+  columns:
+  - id
+  - name
+  - age
+  - national
+  - created_at
+  - updated_at
+  - slug
+  - image
+  - image_team
+  - team_id
+  records: 
+  - - 1
+    - Rahmad Darmawan
+    - 47
+    - Indonesia
+    - 2013-08-02 03:54:14.000000000 Z
+    - 2013-09-04 04:19:41.000000000 Z
+    - rahmad-darmawan
+    - rahmad_darmawan.jpg
+    - Indonesia.gif
+    - 1
+  - - 2
+    - Joe kim loe
+    - 35
+    - Jerman
+    - 2013-08-13 02:07:34.000000000 Z
+    - 2013-09-02 09:19:52.000000000 Z
+    - joe-kim-loe
+    - download.jpg
+    - german-flag.png
+    - 2
+  - - 3
+    - agus rahman
+    - 30
+    - Blanda
+    - 2013-08-13 02:26:04.000000000 Z
+    - 2013-09-02 09:20:40.000000000 Z
+    - agus-rahman
+    - 
+    - 
+    - 10
+  - - 4
+    - Nogo-nogo
+    - 45
+    - Japan
+    - 2013-09-02 08:41:12.000000000 Z
+    - 2013-09-02 08:41:12.000000000 Z
+    - nogo-nogo
+    - 
+    - japan-flag.gif
+    - 
+  - - 5
+    - Luiz Felipe Scolari
+    - 64
+    - Brazil
+    - 2013-09-02 09:16:43.000000000 Z
+    - 2013-09-04 04:37:26.000000000 Z
+    - luiz-felipe-scolari
+    - Luiz-Felipe-Scolari_0.jpg
+    - Brazil-Flag.jpg
+    - 9
+  - - 6
+    - ! 'Louis Van Gaal '
+    - 62
+    - Blanda
+    - 2013-09-02 09:33:47.000000000 Z
+    - 2013-09-04 04:47:05.000000000 Z
+    - louis-van-gaal
+    - Van-Gaal.jpg
+    - blanda.jpg
+    - 10
+  - - 7
+    - Vicente del Bosque
+    - 62
+    - Spain
+    - 2013-09-02 09:50:04.000000000 Z
+    - 2013-09-04 04:55:13.000000000 Z
+    - vicente-del-bosque
+    - Vicente-del-Bosque_2896994.jpg
+    - spain1.jpg
+    - 11
+  - - 8
+    - 康喜 (Kang-Hee)
+    - 54
+    - Korea Selatan
+    - 2013-09-04 04:11:37.000000000 Z
+    - 2013-09-04 04:11:37.000000000 Z
+    - kang-hee
+    - kanghae.jpg
+    - south_korea.png
+    - 12
+
+---
+comments:
+  columns:
+  - id
+  - commentable_type
+  - commentable_id
+  - message
+  - created_at
+  - updated_at
+  - user_id
+  - removed
+  records: 
+  - - 19
+    - Player
+    - '2'
+    - aku
+    - 2013-09-03 08:58:32.000000000 Z
+    - 2013-09-05 08:16:28.000000000 Z
+    - 6
+    - true
+  - - 21
+    - Player
+    - '2'
+    - bb
+    - 2013-09-03 08:59:09.000000000 Z
+    - 2013-09-03 08:59:09.000000000 Z
+    - 6
+    - false
+  - - 22
+    - Player
+    - '2'
+    - percobaan
+    - 2013-09-05 08:21:32.000000000 Z
+    - 2013-09-05 08:21:32.000000000 Z
+    - 6
+    - false
+
+---
+match_schedules:
+  columns:
+  - id
+  - home_team_id
+  - away_team_id
+  - start_at
+  - created_at
+  - updated_at
+  - slug
+  records: 
+  - - 1
+    - 1
+    - 2
+    - 2013-12-19 21:30:00.000000000 Z
+    - 2013-08-05 21:25:33.000000000 Z
+    - 2013-08-05 21:25:33.000000000 Z
+    - '1'
+  - - 3
+    - 8
+    - 9
+    - 2013-08-01 09:30:13.000000000 Z
+    - 2013-08-20 07:19:32.000000000 Z
+    - 2013-08-20 07:19:32.000000000 Z
+    - 
+  - - 8
+    - 8
+    - 2
+    - 2013-09-05 10:47:22.000000000 Z
+    - 2013-09-05 03:42:14.000000000 Z
+    - 2013-09-05 03:42:14.000000000 Z
+    - 
+  - - 11
+    - 1
+    - 9
+    - 2013-09-05 11:09:04.000000000 Z
+    - 2013-09-05 04:05:50.000000000 Z
+    - 2013-09-05 04:05:50.000000000 Z
+    - 
+  - - 12
+    - 1
+    - 10
+    - 2013-09-05 11:16:10.000000000 Z
+    - 2013-09-05 04:15:46.000000000 Z
+    - 2013-09-05 04:15:46.000000000 Z
+    - 
+  - - 13
+    - 2
+    - 8
+    - 2013-09-05 11:51:39.000000000 Z
+    - 2013-09-05 04:17:46.000000000 Z
+    - 2013-09-05 04:17:46.000000000 Z
+    - 
+  - - 14
+    - 2
+    - 12
+    - 2013-09-05 11:51:56.000000000 Z
+    - 2013-09-05 04:51:14.000000000 Z
+    - 2013-09-05 04:51:14.000000000 Z
+    - 
+  - - 16
+    - 1
+    - 11
+    - 2013-09-05 06:12:00.000000000 Z
+    - 2013-09-05 06:13:02.000000000 Z
+    - 2013-09-05 06:23:16.000000000 Z
+    - 
+  - - 17
+    - 9
+    - 11
+    - 2013-09-05 06:13:00.000000000 Z
+    - 2013-09-05 06:13:48.000000000 Z
+    - 2013-09-05 06:13:48.000000000 Z
+    - 
+
+---
+players:
+  columns:
+  - id
+  - name
+  - number_player
+  - slug
+  - created_at
+  - updated_at
+  - team_id
+  - position
+  - age
+  - birth_date
+  - birth_place
+  - height
+  - weight
+  - foot
+  - market_value
+  - player_agent
+  - image
+  - national
+  - image_team
+  records: 
+  - - 1
+    - Zlatan Ibrahimovic
+    - 10
+    - zlatan-ibrahimovic
+    - 2013-08-02 03:02:47.000000000 Z
+    - 2013-09-04 04:25:42.000000000 Z
+    - 8
+    - Striker - Centre Forward
+    - 31
+    - 03-10-1981
+    - Malmö
+    - 195 cm
+    - 84 kg
+    - Both
+    - 26.500.000 £
+    - Mino Raiola
+    - a9eeeca9ba3f36c086da30ae1ccf69f0.jpg
+    - Indonesia
+    - psg.jpg
+  - - 2
+    - Wiraka Dluha
+    - 10
+    - wiraka-dluha
+    - 2013-08-02 03:03:51.000000000 Z
+    - 2013-09-04 06:45:09.000000000 Z
+    - 1
+    - Midfilder
+    - 20
+    - 19-06-1993
+    - Jakarta
+    - 165 cm
+    - 50 kg
+    - Both
+    - ! '86.500.000 £ '
+    - Dion Ramdoni
+    - DSC03055.jpg
+    - Indonesia
+    - Indonesia.gif
+  - - 3
+    - Bambang Pamungkas
+    - 20
+    - bambang-pamungkas
+    - 2013-08-20 05:58:24.000000000 Z
+    - 2013-09-04 04:24:28.000000000 Z
+    - 1
+    - Striker - Centre Forward
+    - 27
+    - ! '26 November 1966 '
+    - Salatiga, Indonesia
+    - 171 cm
+    - 65 kg
+    - Both
+    - ''
+    - ''
+    - Bambang-Pamungkas-menuju-legenda.jpg
+    - Indonesia
+    - Indonesia.gif
+  - - 4
+    - Mesut Özil
+    - 10
+    - mesut-ozil
+    - 2013-08-20 06:07:35.000000000 Z
+    - 2013-09-04 04:30:26.000000000 Z
+    - 2
+    - Midfield - Attacking Midfield
+    - 24
+    - 15.10.1988
+    - Gelsenkirchen, Germany
+    - 183 cm
+    - ''
+    - Left
+    - 35.000.000 £
+    - ÖZIL International Sportmanagement GmbH
+    - OZIL.png
+    - Germany
+    - images.jpg
+  - - 5
+    - Neymar
+    - 10
+    - neymar
+    - 2013-08-20 08:08:58.000000000 Z
+    - 2013-09-04 04:42:25.000000000 Z
+    - 9
+    - Striker - Left Wing
+    - 21
+    - 05.02.1992
+    - Mogi das Cruzes, Brazil
+    - 174 cm
+    - 60 kg
+    - Both
+    - 44.000.000 £
+    - MJF PUBLICIDADE E PROMOCOES S/C LTDA.
+    - neymar.jpg
+    - Brazil
+    - Brazil-Flag.jpg
+  - - 6
+    - 本田 圭佑(Honda)
+    - 10
+    - honda
+    - 2013-09-02 08:40:26.000000000 Z
+    - 2013-09-04 04:34:24.000000000 Z
+    - 8
+    - Striker - Centre Forward
+    - 27
+    - 13.06.1986
+    - ! 'Settsu, Osaka '
+    - 1,82 cm
+    - ''
+    - Left
+    - 17.500.000 £
+    - Beratung durch Familienangehörigen
+    - honda.png
+    - Japan
+    - japan-flag.gif
+  - - 7
+    - Robin van Persie
+    - 7
+    - robin-van-persie
+    - 2013-09-02 09:23:28.000000000 Z
+    - 2013-09-04 04:52:58.000000000 Z
+    - 10
+    - Striker - Centre Forward
+    - 30
+    - 06.08.1983
+    - ! 'Rotterdam  '
+    - 1,83 cm
+    - ''
+    - Left
+    - 39.500.000 £
+    - Sports Entertainment Group
+    - Robin-Van-Persie-Belanda.jpg
+    - Netherlands
+    - blanda.jpg
+  - - 8
+    - Blandasiao
+    - 10
+    - blandasiao
+    - 2013-09-02 09:35:27.000000000 Z
+    - 2013-09-02 09:35:27.000000000 Z
+    - 10
+    - 
+    - 25
+    - 03-10-1981
+    - Amsterdam
+    - 195 cm
+    - 84 kg
+    - Both
+    - 26.500.000 £
+    - Blondasai
+    - 
+    - Belanda
+    - 20120527belanda.jpg
+  - - 9
+    - spainon
+    - 10
+    - spainon
+    - 2013-09-02 09:45:27.000000000 Z
+    - 2013-09-02 09:45:27.000000000 Z
+    - 11
+    - Striker - Centre Forward
+    - 31
+    - 03-10-1981
+    - Spain
+    - 195 cm
+    - 84 kg
+    - Both
+    - 26.500.000 £
+    - Mino Raiola
+    - 
+    - Spain
+    - spain1.jpg
+  - - 10
+    - Xabi Alonso
+    - 25
+    - xabi-alonso
+    - 2013-09-02 09:46:31.000000000 Z
+    - 2013-09-02 09:46:31.000000000 Z
+    - 11
+    - Midfilder
+    - 31
+    - 03-10-1981
+    - Malmö
+    - 195 cm
+    - 84 kg
+    - Both
+    - 26.500.000 £
+    - Mino Raiola
+    - 
+    - Spain
+    - spain1.jpg
+  - - 11
+    - 박지성(Park Ji-Sung)
+    - 7
+    - park-ji-sung
+    - 2013-09-04 04:04:21.000000000 Z
+    - 2013-09-04 04:04:21.000000000 Z
+    - 12
+    - Midfield - Central Midfield
+    - 32
+    - 25.02.1981
+    - Seoul, Korea Selatan
+    - 1,78 cm
+    - 60 kg
+    - Both
+    - 2.200.000 £
+    - ! 'WMG Management '
+    - park-ji-sung21.jpg
+    - Korea Selatan
+    - south_korea.png
+
+---
+scores:
+  columns:
+  - id
+  - name_team1
+  - name_team2
+  - score_team1
+  - score_team2
+  - created_at
+  - updated_at
+  - slug
+  - date
+  - name_scoring_goals
+  - ball_position_team1
+  - ball_position_team2
+  records: 
+  - - 1
+    - Indonesia
+    - Jerman
+    - 3
+    - 2
+    - 2013-08-06 10:57:02.000000000 Z
+    - 2013-08-06 10:57:02.000000000 Z
+    - indonesia
+    - 2013-06-19 00:00:00.000000000 Z
+    - 
+    - 
+    - 
+
+---
+taggings:
+  columns:
+  - id
+  - tag_id
+  - taggable_id
+  - taggable_type
+  - tagger_id
+  - tagger_type
+  - context
+  - created_at
+  records: 
+  - - 1
+    - 1
+    - 1
+    - Player
+    - 
+    - 
+    - tags
+    - 2013-08-02 03:10:02.000000000 Z
+  - - 2
+    - 2
+    - 1
+    - Player
+    - 
+    - 
+    - tags
+    - 2013-08-02 03:10:02.000000000 Z
+  - - 3
+    - 3
+    - 1
+    - Player
+    - 
+    - 
+    - tags
+    - 2013-08-02 03:10:02.000000000 Z
+  - - 4
+    - 4
+    - 1
+    - Player
+    - 
+    - 
+    - tags
+    - 2013-08-02 03:10:02.000000000 Z
+  - - 5
+    - 5
+    - 1
+    - Player
+    - 
+    - 
+    - tags
+    - 2013-08-02 03:10:02.000000000 Z
+
+---
+tags:
+  columns:
+  - id
+  - name
+  records: 
+  - - 1
+    - good boy
+  - - 2
+    - hard runner
+  - - 3
+    - good skills
+  - - 4
+    - hard work
+  - - 5
+    - stronger
+
+---
+teams:
+  columns:
+  - id
+  - name
+  - name_kode
+  - slug
+  - created_at
+  - updated_at
+  - coach_id
+  records: 
+  - - 1
+    - Indonesia
+    - INA
+    - indonesia
+    - 2013-08-02 03:07:13.000000000 Z
+    - 2013-08-12 23:45:36.000000000 Z
+    - 1
+  - - 2
+    - Jerman
+    - JRM
+    - jerman
+    - 2013-08-06 11:00:56.000000000 Z
+    - 2013-08-06 11:09:53.000000000 Z
+    - 2
+  - - 8
+    - Japan
+    - JPN
+    - japan
+    - 2013-08-13 01:07:30.000000000 Z
+    - 2013-08-13 01:07:30.000000000 Z
+    - 4
+  - - 9
+    - Brazil
+    - BZL
+    - brazil
+    - 2013-08-20 07:01:18.000000000 Z
+    - 2013-09-02 09:29:06.000000000 Z
+    - 5
+  - - 10
+    - Netherlands
+    - NTD
+    - netherlands
+    - 2013-09-02 08:23:23.000000000 Z
+    - 2013-09-04 04:51:27.000000000 Z
+    - 6
+  - - 11
+    - Spain
+    - SPN
+    - spain
+    - 2013-09-02 08:30:49.000000000 Z
+    - 2013-09-02 09:55:10.000000000 Z
+    - 7
+  - - 12
+    - Korea-Selatan
+    - KSN
+    - korea-selatan
+    - 2013-09-02 08:35:29.000000000 Z
+    - 2013-09-04 04:12:07.000000000 Z
+    - 8
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - first_name
+  - last_name
+  - slug
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
+  - failed_attempts
+  - unlock_token
+  - locked_at
+  - authentication_token
+  - created_at
+  - updated_at
+  - image
+  - super_admin
+  records: 
+  - - 1
+    - as@as.com
+    - $2a$10$1ALZ3ERB4zxLDOUrK3qnSuTlllg0njBw/jItSErWM3/dh4kUuHENm
+    - asdf
+    - aaaa
+    - asdf-aaaa
+    - 
+    - 
+    - 
+    - 1
+    - 2013-09-03 08:02:33.000000000 Z
+    - 2013-09-03 08:02:33.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-03 08:02:33.000000000 Z
+    - 2013-09-03 08:02:25.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-03 08:02:25.000000000 Z
+    - 2013-09-03 08:02:33.000000000 Z
+    - download.jpg
+    - false
+  - - 6
+    - mm@mm.com
+    - $2a$10$qVnEaE5UI4fvjYrk0/O66uNIhjB3JeVxQPDbp5zkrE6Z4MUT.WTKi
+    - wiraka
+    - dluha
+    - wiraka-dluha
+    - 
+    - 
+    - 
+    - 6
+    - 2013-09-05 22:29:16.000000000 Z
+    - 2013-09-05 22:24:15.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-03 08:31:34.000000000 Z
+    - 2013-09-03 08:31:20.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-03 08:31:20.000000000 Z
+    - 2013-09-05 22:29:16.000000000 Z
+    - 1238165_657145704297365_855905114_n.jpg
+    - true

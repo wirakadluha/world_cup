@@ -21,9 +21,9 @@
 						<td><%= f.text_field :name_kode %></td>
 					</tr>
 					<tr>
-						<td>Match Schedule</td>
+						<td>Coach</td>
 						<td>:</td>
-						<td><%= f.collection_select :match_schedule_id, MatchSchedule.all, :id, :home_team_id %></td>
+						<td><%= f.collection_select :coach_id, Coach.all, :id, :name %></td>
 					</tr>
 				<tr>
 					<td colspan = '3'><%= f.submit %>
